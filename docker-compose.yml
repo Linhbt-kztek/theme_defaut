@@ -1,0 +1,39 @@
+networks:
+  network-defaut-theme:
+    driver: bridge
+
+services:
+  #PHP Service
+  app:
+    image: theme-defaut
+    container_name: 'app-defaut-theme'
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./.env:/var/www/html/.env
+    networks:
+      - network-defaut-theme
+
+  #Database service
+  mysql:
+    image: mysql:8.0
+    container_name: 'mysql-defaut-theme'
+    restart: unless-stopped
+    volumes:
+      - ./data-mysql:/var/lib/mysql
+    ports:
+      - '${FORWARD_DB_PORT:-3306}:3306'
+    env_file:
+      - ".env"
+    environment:
+      MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_DATABASE: '${DB_DATABASE}'
+      MYSQL_USER: '${DB_USERNAME}'
+      MYSQL_PASSWORD: '${DB_PASSWORD}'
+    networks:
+      - network-defaut-theme
