@@ -1,0 +1,27 @@
+.card-body{
+    width: 100%;
+    margin: auto;
+    background-color: #fff;
+}
+.auth-bg {
+    background-image: url('../images/login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.web-name{
+    font-size: 42px;
+    color: #f15922;
+    font-weight: 900;
+}
+
+
+.check-input:checked{
+    accent-color: #f15922;
+    cursor: pointer;
+}
+
+
