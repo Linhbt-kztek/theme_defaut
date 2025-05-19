@@ -1,14 +1,14 @@
 <!-- ========== App Menu ========== -->
-<div class="app-menu navbar-menu">
+<div class="app-menu bg-white navbar-menu shadow-md">
     <!-- LOGO -->
-    <div class="navbar-brand-box">
+    <div class="navbar-brand-box d-flex oo">
         <!-- Dark Logo-->
         <a href="index" class="logo logo-dark">
             <span class="logo-sm">
-                <img src="{{ URL::asset('assets/images/logo-sm.png') }}" alt="" height="22">
+                  <img src="{{ URL::asset('assets/images/logo-dark.png') }}" alt="" height="15">
             </span>
             <span class="logo-lg">
-                <img src="{{ URL::asset('assets/images/logo-dark.png') }}" alt="" height="17">
+                <img src="{{ URL::asset('assets/images/logo-dark.png') }}" alt="" height="30">
             </span>
         </a>
         <!-- Light Logo-->
@@ -17,7 +17,7 @@
                 <img src="{{ URL::asset('assets/images/logo-sm.png') }}" alt="" height="22">
             </span>
             <span class="logo-lg">
-                <img src="{{ URL::asset('assets/images/logo-light.png') }}" alt="" height="17">
+                <img src="{{ URL::asset('assets/images/logo-light.png') }}" alt="" height="30">
             </span>
         </a>
         <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
@@ -30,21 +30,15 @@
 
             <div id="two-column-menu">
             </div>
-            <ul class="navbar-nav" id="navbar-nav">
-                <li class="menu-title"><span >@lang('translation.menu')</span></li>
+            <ul class="navbar-nav bg-white" id="navbar-nav">
+                 <!-- start Dashboard Menu -->
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button"
                         aria-expanded="false" aria-controls="sidebarDashboards">
-                        <i data-feather="home" class="icon-dual"></i> <span >@lang('translation.dashboards')</span>
+                        <i class="ri-home-line"></i><span data-key="t-landing">Dashboard</span>
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarDashboards">
                         <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="dashboard-analytics" class="nav-link" >@lang('translation.analytics')</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="dashboard-crm" class="nav-link" >@lang('translation.crm')</a>
-                            </li>
                             <li class="nav-item">
                                 <a href="index" class="nav-link" >@lang('translation.ecommerce')</a>
                             </li>
@@ -455,7 +449,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link menu-link" target="_blank" href="landing">
-                        <i class="ri-rocket-line"></i>  <span data-key="t-landing">Landing</span>
+                        <i class="ri-rocket-line"></i><span data-key="t-landing">Landing</span>
                         <span class="badge badge-pill bg-danger" data-key="t-new">New</span>
                     </a>
                 </li>
@@ -841,3 +835,7 @@
 <!-- Left Sidebar End -->
 <!-- Vertical Overlay-->
 <div class="vertical-overlay"></div>
+
+@section('script')
+    <link rel="stylesheet" href="{{ url('assets/css/sidebar.css') }}">
+@endsection
