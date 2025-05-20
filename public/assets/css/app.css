@@ -740,7 +740,7 @@
 	font-size: 1.05rem;
 	position: absolute;
 	right: 18px;
-	color: var(--vz-vertical-menu-title-color)
+	color: var(--vz-vertical-menu-title-color) !important;
 }
 
 .navbar-menu .navbar-nav .nav-link[data-bs-toggle=collapse][aria-expanded=true] {
