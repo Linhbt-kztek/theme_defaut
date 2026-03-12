@@ -888,7 +888,7 @@
                 </li>
 
             </ul>
-        <div class="position-absolote bottom-0 right-0 text-center w-100 license overflow-hidden">
+        <div class=" text-center w-100 license overflow-hidden">
                 <p class="mb-0 text-muted  overflow-hidden">Phiên bản &copy;
                     <script>document.write(new Date().getFullYear())</script>
                 <p class="mb-0 text-muted  overflow-hidden">Powered by Kztek Software</p>
@@ -898,13 +898,21 @@
         <!-- Sidebar -->
 
     </div>
+          
+        </div>
     <div class="text-bg position-absolute bottom-0 left-0 h-auto">
         <p class="m-0"><span class="mb-3">K</span><br><span>Z</span></p>
     </div>
 
 </div>
 
+
 </div>
+ <div class="text-center w-100 license overflow-hidden">
+            <p class="mb-0 text-muted overflow-hidden">Phiên bản &copy;
+                <script>document.write(new Date().getFullYear())</script>
+            <p class="mb-0 text-muted overflow-hidden">Powered by Kztek Software</p>
+        </div>
 <!-- Left Sidebar End -->
 <!-- Vertical Overlay-->
 <div class="vertical-overlay"></div>
