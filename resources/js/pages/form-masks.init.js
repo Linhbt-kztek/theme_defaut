@@ -7,7 +7,7 @@ File: Form masks Js File
 */
 
 if (document.querySelector("#cleave-date")) {
-    var cleaveDate = new Cleave('#  ', {
+    var cleaveDate = new Cleave('#cleave-date', {
         date: true,
         delimiter: '-',
         datePattern: ['d', 'm', 'Y']

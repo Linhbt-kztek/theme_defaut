@@ -1,0 +1,20 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-4ed993c7.js",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "dynamicImports": [
+      "resources/js/bootstrap.js"
+    ],
+    "file": "assets/app-f52fc28b.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/js/bootstrap.js": {
+    "file": "assets/bootstrap-6bb05423.js",
+    "isDynamicEntry": true,
+    "src": "resources/js/bootstrap.js"
+  }
+}

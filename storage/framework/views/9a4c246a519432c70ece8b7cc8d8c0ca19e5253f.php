@@ -7,7 +7,7 @@ $count = 1;
     <?php $count++; ?>
     <!-- nếu có menu con -->
     <?php if(!empty($item['child_menu'])): ?>
-        <?php echo $__env->make('components.child-menu', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+        <?php echo $__env->make('components.include.childMenu', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php else: ?>
         <!-- nếu menu con rỗng -->
         <li class="nav-item">
@@ -23,4 +23,17 @@ $count = 1;
     <?php endif; ?>
 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
+<style>
+    .navbar-menu .navbar-nav .nav-link[data-bs-toggle=collapse][aria-expanded=true]:after {
+        color: #6d7080;
+    }
+
+    [data-layout=vertical][data-sidebar=light] .navbar-nav .nav-sm .nav-link:before {
+        background-color: #19314900 !important;
+    }
+
+    [data-layout=vertical][data-sidebar=light] .navbar-nav .nav-sm .nav-link:hover:before {
+        background-color: #19314900 !important;
+    }
+</style>
 <?php /**PATH C:\laragon\www\theme_defaut\resources\views/components/left-menu.blade.php ENDPATH**/ ?>

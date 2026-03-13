@@ -1,6 +1,6 @@
 @extends('layouts.master-without-nav')
 @section('title')
-@lang('translation.password-reset')
+@lang('translation.reset-email')
 @endsection
 @section('content')
 
@@ -24,7 +24,7 @@
                             <div class="text-center mt-sm-5 mb-4 text-white-50">
                                 <div>
                                     <a href="index" class="d-inline-block auth-logo">
-                                        <img src="{{ URL::asset('assets/images/logo-light.png') }}" alt="" height="20">
+                                        <img src="{{ config('kztek_config.url_public').('assets/images/logo-light.png') }}" alt="" height="20">
                                     </a>
                                 </div>
                                 <p class="mt-3 fs-15 fw-medium">Premium Admin & Dashboard Template</p>
@@ -87,7 +87,7 @@
                                                 <div class="col-3">
                                                     <div class="mb-3">
                                                         <label for="digit4-input" class="visually-hidden">Dight 4</label>
-                                                        <input type="text"class="form-control form-control-lg bg-light border-light text-center"
+                                                        <input type="text" class="form-control form-control-lg bg-light border-light text-center"
                                                             onkeyup="moveToNext(this, 4)" maxLength="1"
                                                             id="digit4-input">
                                                     </div>
@@ -135,7 +135,7 @@
 
 @endsection
 @section('script')
-    <script src="{{ URL::asset('assets/libs/particles.js/particles.js.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/pages/particles.app.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/pages/two-step-verification.init.js') }}"></script>
+    <script src="{{ config('kztek_config.url_public').('assets/libs/particles.js/particles.js.min.js') }}"></script>
+    <script src="{{ config('kztek_config.url_public').('assets/js/pages/particles.app.js') }}"></script>
+    <script src="{{ config('kztek_config.url_public').('assets/js/pages/two-step-verification.init.js') }}"></script>
 @endsection

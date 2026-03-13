@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@import '../sass/fonts';
+
+
+// variable
+$colorTheme : #B69325 ;
+$mainBlack : #000000 ;
+$secondBlack : #161616 ;
+$gray : #7B7979 ; 
+$beaufort: 'Beaufort' , san-serif;
+$roboto: 'Roboto' , san-serif;
+$robotoMono : 'Roboto Mono' , san-serif ; 
+$robotoFlex : 'Roboto Flex' , san-serif ; 
+$brownVn : 'BrownVN' , san-serif ; 
+
+
+
+@import '../sass/bootstrap-reboot',  '../sass/bootstrap-grid','./bootstrap/transitions' , './bootstrap/utilities', './bootstrap/images',  './bootstrap/forms' ,  './bootstrap/dropdown',  './bootstrap/modal', '../sass/reset';
+@import '../sass/components/header';
+@import '../sass/body';
+@import '../sass/page/home' , '../sass/page/rule';
+@import '../sass/responsive';

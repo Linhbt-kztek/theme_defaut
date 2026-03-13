@@ -1,0 +1,14 @@
+﻿ul.typeahead {
+    width: 94%;
+    max-height: 250px;
+    overflow-y: auto
+}
+ul.typeahead li.active {
+    background-color: #8BCBFC;;
+}
+ul.typeahead li.active a:hover {
+    background-color: #8BCBFC;;
+}
+ul.typeahead li {
+    border-bottom: 1px solid #ccc !important;
+}

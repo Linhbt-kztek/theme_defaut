@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+    app:
+        image: kztek/icourt:deploy
+        restart: unless-stopped
+        ports:
+            - "8562:80"
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - ./.env:/var/www/html/.env
+        networks:
+            - network-icourt
+
+networks:
+    network-icourt:
+        driver: bridge

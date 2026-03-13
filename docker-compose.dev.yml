@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+    app:
+        image: kztek/icourt:deploy
+        restart: unless-stopped
+        ports:
+            - "8564:80"
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - ./.env:/var/www/html/.env # File cấu hình môi trường  
+            - ./app:/var/www/html/app # Thư mục chứa mã nguồn ứng dụng  
+            - ./config:/var/www/html/config # Thư mục cấu hình  
+            - ./database:/var/www/html/database # Thư mục chứa cơ sở dữ liệu  
+            - ./public:/var/www/html/public # Thư mục chứa file công khai như CSS, JS, hình ảnh  
+            - ./resources:/var/www/html/resources # Thư mục chứa tài nguyên công việc như view và lang  
+            - ./routes:/var/www/html/routes # Thư mục chứa định nghĩa route  
+        networks:
+            - network-meeting_management
+    # rabbitmq:
+    #     image: rabbitmq:3.13-management-alpine
+    #     container_name: 'rabbitmq'
+    #     restart: unless-stopped
+    #     ports:
+    #         - 5672:5672
+    #         - 15672:15672
+    #     networks:
+    #         - network-meeting_management
+    # queue:
+    #     build: .
+    #     container_name: app-queue
+    #     command: php artisan queue:work --tries=3
+    #     working_dir: /var/www/html
+    #     volumes:
+    #     - .:/var/www/html
+    #     depends_on:
+    #     - app
+networks:
+    network-meeting_management:
+        driver: bridge

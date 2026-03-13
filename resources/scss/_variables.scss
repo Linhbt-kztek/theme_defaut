@@ -1,7 +1,7 @@
 // Variables
 
 // Google Font
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
 
 //
 // custom-variables
@@ -12,8 +12,8 @@
 $variable-prefix:             vz-;
 
 // Font Family
-$font-family-primary:                             'Open Sans', sans-serif;
-$font-family-secondary:                           'Open Sans', sans-serif;
+$font-family-primary:                             'Nunito', sans-serif;
+$font-family-secondary:                           'Nunito', sans-serif;
 
 //
 // Vertical Menu
@@ -24,8 +24,8 @@ $vertical-menu-width-sm:                          70px;
 
 // Light Menu
 $vertical-menu-bg:                                var(--#{$variable-prefix}vertical-menu-bg);
-$vertical-menu-box-shadow:                        none;
-$vertical-menu-border:                            $border-color;
+$vertical-menu-box-shadow:                        0 2px 4px rgba(15,34,58,0.12);
+$vertical-menu-border:                            $white;
 $vertical-menu-z-index:                           1002;
 $vertical-menu-item-font-size:                    0.9375rem;
 $vertical-menu-item-font-family:                  $font-family-secondary;
@@ -94,8 +94,8 @@ $header-item-color-dark:                         var(--#{$variable-prefix}header
 
 // Topbar Search
 $topbar-search-bg:                                var(--#{$variable-prefix}topbar-search-bg);
-$page-title-box-shadow:                           none;
-$page-title-border:                               var(--#{$variable-prefix}border-color);
+$page-title-box-shadow:                           0 1px 2px rgba(56,65,74,0.15);;
+$page-title-border:                               none;
 
 // Topbar User
 $topbar-user-bg: var(--#{$variable-prefix}topbar-user-bg);
@@ -124,15 +124,18 @@ $font-weight-semibold: 600;
 
 // heading
 $heading-color: var(--#{$variable-prefix}heading-color);
-$heading-font-family:         $font-family-secondary;
+$heading-font-family: $font-family-secondary;
+
+// Elements Shadow
+$element-shadow:              none;
 
 // Chat
-$chat-primary-bg:       var(--#{$variable-prefix}light);
-$chat-secondary-bg:    rgba(var(--#{$variable-prefix}primary-rgb), 0.15);
-$chat-secondary-color:  var(--#{$variable-prefix}primary);
+$chat-primary-bg:       var(--#{$variable-prefix}card-bg);
+$chat-secondary-bg:    rgba(var(--#{$variable-prefix}success-rgb), 0.15);
+$chat-secondary-color:  var(--#{$variable-prefix}success);
 
 // Timeline
-$timeline-color:   var(--#{$variable-prefix}light);     
+$timeline-color:   var(--#{$variable-prefix}card-bg);     
 
 // Variables
 //
@@ -171,16 +174,16 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
-$blue:       #32ccff;
-$indigo:     #516196;
-$purple:     #8772f9;
+$blue:       #3d78e3;
+$indigo:     #5b71b9;
+$purple:     #6559cc;
 $pink:       #f672a7;
-$red:        #f06548;
+$red:        #f17171;
 $orange:     #f1963b;
-$yellow:     #FFBC0A;
-$green:      #00bd9d;
+$yellow:     #ffc84b;
+$green:      #67b173;
 $teal:       #02a8b5;
-$cyan:       #25a0e2;
+$cyan:       #29badb;
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -202,14 +205,14 @@ $colors: (
 // scss-docs-end colors-map
 
 // scss-docs-start theme-color-variables
-$primary:       $cyan;
-$secondary:     $gray-600;
+$primary:       $blue;
+$secondary:     $indigo;
 $success:       $green;
-$info:          $blue;
+$info:          $cyan;
 $warning:       $yellow;
 $danger:        $red;
 $light:         $gray-100;
-$dark:          $gray-800;
+$dark:          $gray-700;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -231,7 +234,7 @@ $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
-$min-contrast-ratio:   1.30;
+$min-contrast-ratio:   1.45;
 
 // Customize the light and dark text colors for use in our color contrast function.
 $color-contrast-dark:      $black;
@@ -531,7 +534,7 @@ $position-values: (
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   #ffffff;
+$body-bg:                   #f3f3f9;
 $body-color:                $gray-900;
 $body-text-align:           null;
 
@@ -669,7 +672,6 @@ $box-shadow:                  0 1px 2px rgba(56,65,74,0.15);
 $box-shadow-sm:               0 .125rem .25rem rgba($black, .075);
 $box-shadow-lg:               0 5px 10px rgba(30, 32, 37, 0.12);
 $box-shadow-inset:            inset 0 1px 2px rgba($black, .075);
-$element-shadow:              none;
 // scss-docs-end box-shadow-variables
 
 $component-active-color:      $white;
@@ -1382,10 +1384,10 @@ $placeholder-opacity-min:           .2;
 $card-spacer-y:                     $spacer;
 $card-spacer-x:                     $spacer;
 $card-title-spacer-y:               $spacer * .5;
-$card-border-width:                 1px;
-$card-border-color:                 $border-color;
+$card-border-width:                 0;
+$card-border-color:                 rgba($black, .125);
 $card-border-radius:                $border-radius;
-$card-box-shadow:                   none;
+$card-box-shadow:                   $box-shadow;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width);
 $card-cap-padding-y:                $card-spacer-y;
 $card-cap-padding-x:                $card-spacer-x;

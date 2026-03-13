@@ -1,0 +1,183 @@
+:root {
+  --color-1: #1a71e5;
+  --color-2: #1152a6;
+  --color-3: #747a7e;
+  --color-4: #2960a0;
+  --color-5: #afd2f0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.box-container {
+  background: var(--color-2);
+  min-height: 100vh;
+  padding: 3.125vw;
+  color: #fff;
+}
+
+.meeting-wrapper {
+  /* height: calc(100vh - 60px); */
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.meeting-brief {
+  /* flex: 6; */
+  display: flex;
+  flex-direction: column;
+}
+
+.member-list {
+  height: 22.4vw;
+  overflow: hidden;
+  background: #0d3f7b;
+  padding: 20px;
+  border-radius: 12px;
+  width: 93.75vw;
+}
+
+.meeting-title-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 8vw;
+}
+
+.meeting-title {
+  font-weight: 700;
+  text-align: center;
+
+  width: 77.39vw;
+
+  /* Multi-line ellipsis */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* số dòng muốn giới hạn */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* Cho phép xuống dòng */
+}
+
+.meeting-info {
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  font-size: 2vw;
+}
+
+.stats-box {
+  background: var(--color-1);
+  width: 27.083vw;
+  padding: 1.5vw;
+  text-align: center;
+  border-radius: 12px;
+  height: 12.5vw;
+}
+
+.stats-label {
+  /* font-size: 1.5rem; */
+  margin: 0;
+  font-weight: 700;
+}
+
+.list-title {
+  font-size: 2.083vw;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 0.5vw;
+}
+
+.table-member {
+  width: 100%;
+  color: #fff;
+}
+
+.table-member td {
+  padding: 8px 5px;
+}
+
+.index {
+  width: 40px;
+  font-weight: bold;
+  font-size: 2vw !important;
+  vertical-align: top;
+  color: #e29c58ff;
+  text-align: right;
+}
+
+.name {
+  font-weight: bold;
+  color: #fff;
+  font-size: 2vw !important;
+  width: 50%;
+  vertical-align: top;
+}
+
+.role {
+  color: var(--color-5);
+  text-align: right;
+
+  font-weight: bold;
+  font-size: 2vw !important;
+}
+
+.meeting-title {
+  font-size: 3.75vw;
+  line-height: 1.1;
+}
+
+.stats-number {
+  font-size: 5.125vw;
+  font-weight: 700;
+  margin: 0;
+}
+
+.stats-label {
+  font-size: clamp(24px, 1.5vw, 72px);
+  line-height: 1.25;
+}
+
+.meeting-brief > div:first-child {
+  flex: 0 0 auto;
+}
+
+.stats-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12.5vw;
+  width: 85.9375vw !important;
+}
+
+.table-wrapper {
+  margin: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.table-member {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-member td {
+  padding: 8px 5px;
+  line-height: 1.5em;
+}
+
+.meeting-info-container {
+  margin-bottom: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25vw;
+}

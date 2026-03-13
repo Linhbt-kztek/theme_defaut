@@ -187,7 +187,7 @@ addBtn.addEventListener("click", function (e) {
             website: websiteField.value,
             contact_email: contact_emailField.value,
             since: sinceField.value,
-            image_src: 'https://managely.themesbrand.com/assets/images/logo-sm.png'
+            image_src: 'https://managely.themesbrand.com/public/assets/images/logo-sm.png'
         });
         companyList.sort('id', { order: "desc" });
         document.getElementById("close-modal").click();

@@ -1,0 +1,40 @@
+// set width cho cột cho flex
+@mixin col-w($width) {
+   flex: 0 0 $width;
+   max-width: $width;
+}
+
+// tạo danh sách khoảng các margin và padding theo class .m, .mr, .ml, .mt, .mb, .p, .pr, .pl, .pt, .pt (vd .m10)
+$spaceamounts: (0, 10, 20, 30, 50);
+$sides: (top, bottom, left, right, all);
+@each $space in $spaceamounts {
+   @each $side in $sides {
+      @if $side == 'all' {
+         .m#{$space} {
+            margin: #{$space}px;
+         }
+
+         .p#{$space} {
+            padding: #{$space}px;
+         }
+      } @else {
+         .m#{str-slice($side, 0, 1)}#{$space} {
+            margin-#{$side}: #{$space}px;
+         }
+
+         .p#{str-slice($side, 0, 1)}#{$space} {
+            padding-#{$side}: #{$space}px;
+         }
+      }
+   }
+}
+
+// tạo danh sách font site theo class .fs- (vd .fs-12)
+@for $i from 10 through 50 {
+   .fs-#{$i} {
+      font-size: #{$i}px;
+   }
+}
+
+$theme: #09609F;
+$theme2: #152764;

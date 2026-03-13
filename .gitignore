@@ -1,4 +1,5 @@
 /vendor/
+/CODE_BACKUP/
 node_modules/
 npm-debug.log
 yarn-error.log
@@ -8,7 +9,6 @@ bootstrap/compiled.php
 app/storage/
 
 # Laravel 5 & Lumen specific
-public/storage
 public/hot
 
 # Laravel 5 & Lumen specific with changed public path
@@ -21,4 +21,27 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+package-lock.json
+pankage.json
+
+# storage/*.sessions
+
+# public/assets/images
+public/images/qrcodes
+public/images/example_folder_zip
+
+settings.json
+composer.lock
+.idea
+storage/logs/*
+
+BACKUP
+public/js/app.js
+public/css/app.css
+public/js/test
+public/mix-manifest.json
 data-mysql
+key_software.txt
+app/key_software.json
+
+firebase_credentials.json

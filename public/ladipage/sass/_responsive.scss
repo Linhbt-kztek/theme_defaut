@@ -1,0 +1,31 @@
+
+@media (min-width : 992px) {
+    .page-ldp {
+        padding-top: 240px;
+    }
+    .home-banner {
+        min-height: 1000px;
+    }
+}
+
+@media (min-width : 1200px) {
+    .header-bottom {
+        .pc-menu {
+            .menu-item {
+                margin: 0 20px;
+            }
+        }
+    }
+}
+@media (min-width : 1440px) {
+    .home-banner {
+        min-height: 1000px;
+    }
+    .header-bottom {
+        .pc-menu {
+            .menu-link {
+                font-size : 14px
+            }
+        }
+    }
+}

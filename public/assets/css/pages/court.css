@@ -1,0 +1,85 @@
+/* ===== MODAL FORM COURT ===== */
+#courtFormModal .modal-content {
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+#courtFormModal .modal-header {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 16px 20px;
+}
+
+#courtFormModal .modal-body {
+    padding: 20px 20px 0 20px;
+}
+
+#courtFormModal .modal-footer {
+    border-top: 1px solid #f0f0f0;
+    padding: 14px 20px;
+}
+
+/* ===== INPUT TÊN SÂN ===== */
+.custom-input {
+    height: 44px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* ===== BLOCK SECTION ===== */
+.form-section {
+    background: #fafafa;
+    border-radius: 10px;
+    padding: 14px 16px;
+    border: 1px solid #eee;
+}
+
+/* ===== ICON ===== */
+.form-section i {
+    font-size: 20px;
+    color: #4b5563;
+    margin-top: 2px;
+}
+
+/* ===== LABEL ===== */
+.form-section label {
+    font-size: 13px;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+/* ===== CHECKBOX & RADIO ===== */
+.form-check-label {
+    font-size: 14px;
+    color: #374151;
+}
+
+.form-check-input {
+    cursor: pointer;
+}
+
+/* ===== TIME INPUT ===== */
+input[type="time"] {
+    height: 40px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+/* Disabled time input */
+input[type="time"]:disabled {
+    background-color: #f3f4f6;
+    color: #6b7280;
+}
+
+/* ===== TEXTAREA ===== */
+textarea.form-control {
+    resize: none;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* ===== FOOTER BUTTON ===== */
+.md-ft-btn .btn {
+    min-width: 90px;
+    border-radius: 8px;
+    font-size: 14px;
+}

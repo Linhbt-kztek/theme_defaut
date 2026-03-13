@@ -1,0 +1,500 @@
+.timeline-item {
+   background: #fff;
+   border-bottom: 1px solid #f2f2f2;
+   padding: 25px;
+   margin: 0 auto;
+}
+
+@keyframes placeHolderShimmer {
+   0% {
+      background-position: -468px 0;
+   }
+   100% {
+      background-position: 468px 0;
+   }
+}
+
+.animated-background {
+   animation-duration: 1s;
+   animation-fill-mode: forwards;
+   animation-iteration-count: infinite;
+   animation-name: placeHolderShimmer;
+   animation-timing-function: linear;
+   background: #f6f7f8;
+   background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+   background-size: 800px 104px;
+   height: 40px;
+   position: relative;
+}
+
+.background-masker {
+   background: #fff;
+   position: absolute;
+
+   &.header-top,
+   &.header-bottom,
+   &.subheader-bottom {
+      top: 0;
+      left: 40px;
+      right: 0;
+      height: 10px;
+   }
+
+   &.header-left,
+   &.subheader-left,
+   &.header-right,
+   &.subheader-right {
+      top: 10px;
+      left: 40px;
+      height: 8px;
+      width: 10px;
+   }
+
+   &.header-bottom {
+      top: 18px;
+      height: 6px;
+   }
+
+   &.subheader-left,
+   &.subheader-right {
+      top: 24px;
+      height: 6px;
+   }
+
+   &.header-right,
+   &.subheader-right {
+      width: auto;
+      left: 300px;
+      right: 0;
+   }
+
+   &.subheader-right {
+      left: 230px;
+   }
+
+   &.subheader-bottom {
+      top: 30px;
+      height: 10px;
+   }
+
+   &.content-top,
+   &.content-second-line,
+   &.content-third-line,
+   &.content-second-end,
+   &.content-third-end,
+   &.content-first-end {
+      top: 40px;
+      left: 0;
+      right: 0;
+      height: 6px;
+   }
+
+   &.content-top {
+      height: 20px;
+   }
+
+   &.content-first-end,
+   &.content-second-end,
+   &.content-third-end {
+      width: auto;
+      left: 380px;
+      right: 0;
+      top: 60px;
+      height: 8px;
+   }
+
+   &.content-second-line {
+      top: 68px;
+   }
+
+   &.content-second-end {
+      left: 420px;
+      top: 74px;
+   }
+
+   &.content-third-line {
+      top: 82px;
+   }
+
+   &.content-third-end {
+      left: 300px;
+      top: 88px;
+   }
+}
+
+#create_construction_vue {
+   .block__portfolio .star__rating-item .star__rate .count {
+      vertical-align: 0px;
+   }
+}
+
+.owner-profile .box-detail .other-service.custom-other-service {
+   &.other-service {
+      margin-top: 35px;
+      .other-service-wrap {
+         display: flex !important;
+         align-items: flex-start !important;
+         .show-detail-rate {
+            color: #465188;
+            font-weight: 500;
+            font-size: 13px;
+            border-bottom: 1px solid #465188;
+            margin-left: auto;
+         }
+      }
+      .amount-rate {
+         a {
+            color: #465188;
+         }
+      }
+
+      .list-u {
+         margin-top: 14px;
+
+         li {
+            margin-bottom: 5px;
+
+            .list-u-title {
+               font-size: 13px;
+            }
+
+            .list-u-value {
+               font-size: 13px;
+            }
+         }
+      }
+
+      .avg-rate {
+         margin-right: 0;
+         font-size: 12px;
+         line-height: 15px;
+      }
+
+      .amount-rate {
+         a {
+            font-size: 12px;
+            line-height: 15px;
+            color: #465188;
+            margin-left: 3px;
+         }
+      }
+   }
+   .box-service h6 {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 19px;
+      color: #465188;
+      margin-bottom: 9px;
+   }
+}
+
+.box__col .box-service .list-u li {
+   margin-bottom: 10px;
+}
+
+.modalReview .modal-dialog .modal-content .content-detail-review .content {
+   white-space: pre-wrap;
+   li {
+      list-style: inherit;
+   }
+}
+.comment-box .comment-wrap .item .right .content,
+.comment-box .comment-wrap .item .right .comment-media {
+   li {
+      list-style: inherit;
+   }
+}
+
+.box__upload {
+   display: flex;
+   flex-flow: row wrap;
+   align-items: stretch;
+   margin: 0 -7.5px;
+
+   .upload__col {
+       @include col-w(16.66%);
+       padding: 0 7.5px;
+       margin-bottom: 10px;
+
+       @media (max-width: 1199px) {
+           @include col-w(20%);
+       }
+
+       @media (max-width: 991px) {
+           @include col-w(25%);
+       }
+
+       @media (max-width: 767px) {
+           @include col-w(33.33%);
+       }
+
+       @media (max-width: 575px) {
+           @include col-w(50%);
+       }
+   }
+
+   .btn__upload {
+       position: relative;
+       background: #465188;
+       border-radius: 3px;
+       display: inline-block;
+       height: 170px;
+       width: 100%;
+       text-align: center;
+       line-height: 170px;
+       overflow: hidden;
+
+       input {
+           position: absolute;
+           left: 0;
+           top: 0;
+           z-index: -1;
+           width: 100%;
+           height: 100%;
+       }
+   }
+
+   .images__uploaded {
+       overflow: hidden;
+       border-radius: 3px;
+
+       .images {
+           position: relative;
+           overflow: hidden;
+
+           &:hover {
+               .box__editor {
+                   visibility: visible;
+                   opacity: 1;
+                   transform: translateY(0);
+                   transition: all 0.2s;
+                   cursor: pointer;
+               }
+           }
+
+           img {
+               width: 100%;
+               height: 170px;
+               object-fit: cover;
+               object-position: center;
+           }
+
+           .box__editor {
+               position: absolute;
+               bottom: 10px;
+               right: 20px;
+               visibility: hidden;
+               opacity: 0;
+               transform: translateY(50px);
+               transition: all 0.2s;
+
+               a {
+                   display: inline-block;
+                   background: #00000080;
+                   border-radius: 2px;
+                   width: 24px;
+                   height: 24px;
+                   line-height: 24px;
+                   text-align: center;
+
+                   &:first-child {
+                       margin-right: 10px;
+                   }
+               }
+
+               img {
+                   height: auto;
+                   width: auto;
+               }
+           }
+       }
+   }
+
+   &.box__featured-images {
+       .upload__col {
+           @include col-w(25%);
+
+           @media (max-width: 767px) {
+               @include col-w(33.33%);
+           }
+
+           @media (max-width: 575px) {
+               @include col-w(50%);
+           }
+       }
+
+       .btn__upload {
+           height: 100px;
+           line-height: 100px;
+
+           &~.error__note {
+               position: unset;
+           }
+       }
+
+       .images__uploaded {
+           .images {
+               img {
+                   height: 100px;
+               }
+
+               .box__editor {
+                   img {
+                       height: auto;
+                       width: auto;
+                   }
+               }
+           }
+       }
+   }
+}
+
+.box__adding {
+   display: block;
+
+   .select2-container--default .select2-selection--single {
+       display: block;
+       width: 100%;
+       background: #f9f9fb;
+       border: 1px solid #eaeaec;
+       border-radius: 3px;
+       font-weight: 500;
+       font-size: 14px;
+       color: #222;
+       height: 40px;
+       padding: 0 14px 0 34px;
+       margin-bottom: 0px;
+
+       .select2-selection__rendered {
+           margin-bottom: 0;
+           line-height: 40px;
+       }
+
+       .select2-selection__placeholder {
+           margin-bottom: 0;
+           line-height: 40px;
+       }
+   }
+
+   .select2-container--default .select2-selection--single .select2-selection__arrow {
+       display: none;
+   }
+
+   .select2-container {
+       width: 100% !important;
+
+       &::before {
+           content: "";
+           width: 16px;
+           height: 16px;
+           display: inline-block;
+           position: absolute;
+           left: 15px;
+           top: 13px;
+           background-image: url("../images/icon/icon-search-color.png");
+       }
+   }
+}
+.form-review-success {
+   .modal-body {
+       text-align: center;
+       padding: 88px 30px 35px;
+
+       .img-success {
+           margin-bottom: 25px;
+           display: block;
+
+           svg {
+               width: 60px;
+               height: 60px;
+           }
+       }
+
+       .title-success {
+           font-weight: 500;
+           font-size: 30px;
+           line-height: 48px;
+           text-align: center;
+           color: #222222;
+           margin-bottom: 8px;
+       }
+
+       .sub-title-success {
+           font-size: 16px;
+           line-height: 25px;
+           text-align: center;
+           color: #666666;
+           margin-bottom: 35px;
+       }
+
+       .btn.btn-review-success {
+           background: #152764;
+           border-radius: 5px;
+           color: #ffffff;
+           font-weight: 500;
+           font-size: 16px;
+           line-height: 16px;
+           width: 268px;
+           height: 40px;
+
+           svg {
+               margin-left: 10px;
+           }
+
+           &:hover {
+               background-color: #465188;
+               color: #fff;
+           }
+       }
+
+       .btn.btn-dismiss {
+           font-size: 16px;
+           line-height: 24px;
+           text-align: center;
+           color: #465188;
+           display: block;
+           text-align: center;
+           margin-left: auto;
+           margin-right: auto;
+           margin-top: 20px;
+
+           &:hover {
+               color: var(--danger);
+           }
+       }
+   }
+}
+
+.object-contain {
+   object-fit: contain !important;
+}
+.object-fill {
+   object-fit: fill !important;
+}
+.object-cover {
+   object-fit: cover !important;
+}
+
+.zalo-chat-widget {
+   bottom: 100px !important;
+   right: 4px !important;
+   left : auto !important ; 
+   @media (min-width: 992px) {
+      right: 100px !important;
+      left : auto !important ; 
+   }
+}
+
+.za-chat__head-box {
+   width: 32px !important;
+   height: 32px !important;
+}
+
+.za-chat__head-box img {
+   width: 100% !important;
+   height: 100% !important;
+   object-fit: cover !important;
+   object-position: center !important;
+}
+
+

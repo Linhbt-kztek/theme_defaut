@@ -1,0 +1,59 @@
+body {
+  font-family: fangsong;
+  background: linear-gradient(to right, #55b6d6, #ffc102) !important;
+}
+
+thead {
+  background-color: #032f60;
+  color: #fff;
+}
+
+/* tbody tr {
+        background-color: #fff;
+    } */
+
+.row {
+  margin: 0px;
+}
+
+#div-title {
+  padding-left: 0px;
+}
+
+#div-title div {
+  background-color: #032f60;
+  color: #fff;
+  margin-top: 15px;
+  padding: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 500px;
+}
+
+#div-address div {
+  margin-top: 15px;
+  float: right;
+}
+
+#div-address h3 {
+  color: red;
+}
+
+.row1 {
+  background-color: #fff;
+}
+
+.row2 {
+  background-color: #e1e1e1;
+}
+
+#div-logo div {
+  margin-top: 15px;
+  float: right;
+}
+
+#div-logo img {
+  max-width: 150px;
+  max-height: 50px;
+  object-fit: contain;
+}

@@ -113,6 +113,24 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+
+        //thêm file log check api
+        'check_api' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/check_api.log'),
+            'level' => 'debug',
+        ],
+
+        'invoice' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/invoice.log'),
+            'level' => 'debug',
+        ],
+        'payment' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/payment.log'),
+            'level' => 'debug',
+        ],
     ],
 
 ];

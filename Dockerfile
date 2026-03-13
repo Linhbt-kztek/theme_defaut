@@ -8,11 +8,14 @@ COPY ./docker/nginx/conf.d/default.conf /etc/nginx/conf.d/
 
 # RUN apk add npm && \
 #     chmod +x /usr/local/bin/entrypoint.sh
+COPY ./docker/nginx/cronfile /etc/crontabs/root
 
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 COPY . .
 
 EXPOSE 80
+
+RUN chown -R www-data:www-data /var/www/html
 
 ENTRYPOINT ["entrypoint.sh"]

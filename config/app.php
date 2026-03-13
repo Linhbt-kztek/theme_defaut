@@ -2,6 +2,27 @@
 
 return [
 
+
+    'view_log'=>1,
+
+    //thư mục để ảnh user
+    'folder_image'=>"images/user",
+    // thư mục để ảnh customer
+    'assets/images/customers',
+
+    'paginate' => [
+        'per_page' => 30,
+    ],
+
+    'image_type'=>serialize(array("image/jpeg","image/png","image/jpg")),
+
+
+
+    'eat_id' =>'1509960C-6E2D-9B1A-6C2B-6712DA68F8B1',
+
+    //kich thước file zip ảnh dc phép upload
+
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -67,7 +88,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Ho_Chi_Minh',
 
     /*
     |--------------------------------------------------------------------------
@@ -174,7 +195,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        \App\Providers\RepositoryServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        App\Providers\ResponseServiceProvider::class
     ],
 
     /*
@@ -229,6 +252,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
     ],
 

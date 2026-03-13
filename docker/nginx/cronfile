@@ -1,0 +1,1 @@
+* * * * * for i in {1..60}; do chmod -R 777 /var/www/html/storage && cd /var/www/html && php artisan schedule:run  >> /var/log/cron.log 2>&1; sleep 1; done

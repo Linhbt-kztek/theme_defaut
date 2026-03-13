@@ -1,0 +1,42 @@
+.no-wrap {
+  white-space: nowrap;
+}
+
+.names-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+#session-detail-container {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+#approve_contact_staffs,
+#approve_meeting-chair-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+#approve_contact_staffs .name-item,
+ #approve_meeting-chair-info .name-item {
+  display: inline-flex;
+  align-items: center;
+
+  border-radius: 6px;
+  white-space: nowrap;
+  cursor: default;
+  padding: 4px 8px;
+  background: #f3f6f9;
+  border-radius: 24px;
+  color: #555;
+}
+
+#session-detail-container .form-label {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  justify-content: start;
+  gap: 6px;
+  color: #878a99;
+}

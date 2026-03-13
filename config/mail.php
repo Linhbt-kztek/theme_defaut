@@ -114,5 +114,9 @@ return [
             resource_path('views/vendor/mail'),
         ],
     ],
+    'admin' => [
+        'h.anh17295@gmail.com',
+        'anhnh@kztek.com'
+    ]
 
 ];

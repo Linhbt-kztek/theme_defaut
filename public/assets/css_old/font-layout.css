@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Roboto';
+  src: 
+  /* url('../layout_fonts/Roboto-Black.ttf') format('ttf'), */
+    /* url('../layout_fonts/Roboto-BlackItalic.ttf') format('ttf'),
+    url('../layout_fonts/Roboto-Bold.ttf') format('woff2'),
+    url('../layout_fonts/Roboto-BoldItalic.ttf') format('woff2'),
+    url('../layout_fonts/Roboto-Italic.ttf') format('woff2'),
+    url('../layout_fonts/Roboto-Light.ttf') format('woff2'),
+    url('../layout_fonts/Roboto-LightItalic.ttf') format('woff2'),
+    url('../layout_fonts/Roboto-Medium.ttf') format('woff2'),
+    url('../layout_fonts/Roboto-MediumItalic.ttf') format('woff2'), */
+      url('../layout_fonts/Roboto-Regular.ttf') format('woff2');
+  /* url('../layout_fonts/Roboto-Thin.ttf') format('woff2'),
+    url('../layout_fonts/Roboto-ThinItalic.ttf') format('woff2'); */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}

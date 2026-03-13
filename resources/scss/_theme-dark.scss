@@ -48,21 +48,21 @@
   --#{$variable-prefix}vertical-menu-title-color:             #{$gray-400};
 
   //vertical dark
-  --#{$variable-prefix}vertical-menu-bg-dark:                 #{darken($gray-200, 5%)};
-  --#{$variable-prefix}vertical-menu-item-color-dark:         #9aaab3;
-  --#{$variable-prefix}vertical-menu-item-hover-color-dark:     #{$white};
-  --#{$variable-prefix}vertical-menu-item-active-color-dark:    #{$white};
-  --#{$variable-prefix}vertical-menu-sub-item-color-dark:     #9aaab3;
+  --#{$variable-prefix}vertical-menu-bg-dark:                 #{darken($gray-300, 2.5%)};
+  --#{$variable-prefix}vertical-menu-item-color-dark:        #89929b;
+  --#{$variable-prefix}vertical-menu-item-hover-color-dark:   #{$white};
+  --#{$variable-prefix}vertical-menu-item-active-color-dark:  #{$white};
+  --#{$variable-prefix}vertical-menu-sub-item-color-dark:    #89929b;
   --#{$variable-prefix}vertical-menu-sub-item-hover-color-dark: #{$white};
   --#{$variable-prefix}vertical-menu-sub-item-active-color-dark: #{$white};
-  --#{$variable-prefix}vertical-menu-title-color-dark:         #aeafaf;
+  --#{$variable-prefix}vertical-menu-title-color-dark:         #89929b;
 
   // Topbar - (Default Light)
   --#{$variable-prefix}header-bg:  #292e32;
   --#{$variable-prefix}header-item-color:  #e9ecef;
   // Topbar - Dark
-  --#{$variable-prefix}header-bg-dark:  #{$gray-300};
-  --#{$variable-prefix}header-item-color-dark:  #b0c4d9;
+  --#{$variable-prefix}header-bg-dark:  #282e32;
+  --#{$variable-prefix}header-item-color-dark:  #89929b;
 
   // Topbar Search
   --#{$variable-prefix}topbar-search-bg: #{darken($gray-200, 3%)};
@@ -85,7 +85,7 @@
     
   // two column dark
   --#{$variable-prefix}twocolumn-menu-iconview-bg-dark: var(--#{$variable-prefix}vertical-menu-bg-dark);
-  --#{$variable-prefix}twocolumn-menu-bg-dark:  #{lighten($gray-200, 1%)};
+  --#{$variable-prefix}twocolumn-menu-bg-dark:  #{darken($gray-300, 1.5%)};
   --#{$variable-prefix}twocolumn-menu-item-color-dark: var(--#{$variable-prefix}vertical-menu-item-color-dark);
   --#{$variable-prefix}twocolumn-menu-item-active-color-dark:  #{$white};
   --#{$variable-prefix}twocolumn-menu-item-active-bg-dark:  #{rgba($white, .15)};

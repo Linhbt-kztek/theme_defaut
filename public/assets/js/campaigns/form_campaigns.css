@@ -1,0 +1,178 @@
+.navbar-brand-box {
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+.col-1 {
+  margin: 5px;
+}
+
+#parent {
+  position: relative;
+  display: inline-block;
+}
+
+#parent_add {
+  position: absolute !important;
+  top: 0;
+  left: 12;
+  z-index: 0;
+}
+
+*[id^='chil'] {
+  position: relative;
+  display: inline-block;
+}
+
+*[id^='child_delete'] {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+#parent_add {
+  position: absolute !important;
+  top: 0;
+  left: 0px;
+  z-index: 9999;
+}
+
+.circle-btn {
+  background-color: #bdbdbd !important;
+  border-radius: 0px !important;
+  width: 100% !important;
+  min-height: 0px !important;
+  max-height: 20px !important;
+  padding: 0px !important;
+  color: #fff !important;
+  margin-top: 10px !important;
+}
+
+.text_header {
+  height: 50px;
+  background-color: #bdbdbd;
+  margin-top: 5px;
+  padding-top: 15px;
+}
+
+/* #layout_defaut {
+    display: none;
+} */
+
+/* ////////////////////////////////////////////// */
+/* body{
+    background:#eee;
+    margin-top:20px;
+} */
+.timeline {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  white-space: nowrap;
+  /* ngăn trang bị ngắt dòng */
+}
+
+.hori-timeline .events .event-list {
+  display: block;
+  position: relative;
+  text-align: center;
+  padding-top: 70px;
+  margin-right: 0;
+}
+
+.hori-timeline .events .event-list:before {
+  content: '';
+  position: absolute;
+  height: 36px;
+  border-right: 2px dashed #dee2e6;
+  top: 0;
+}
+
+.hori-timeline .events .event-list .event-date {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  right: 0;
+  width: 75px;
+  margin: 0 auto;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.ui-sortable {
+  height: 90px;
+  border: 1px dashed #a3a3a3;
+  border-radius: 5px;
+  margin-bottom: 5px !important;
+}
+
+@media (min-width: 1140px) {
+  .hori-timeline .events .event-list {
+    display: inline-block;
+    width: 10%;
+    /* padding-top: 45px; */
+  }
+
+  /* .hori-timeline .events .event-list .event-date {
+        top: -12px;
+    } */
+}
+
+.bg-soft-primary {
+  background-color: rgba(64, 144, 203, 0.3) !important;
+}
+
+.bg-soft-success {
+  background-color: rgba(71, 189, 154, 0.3) !important;
+}
+
+.bg-soft-danger {
+  background-color: rgba(231, 76, 94, 0.3) !important;
+}
+
+.bg-soft-warning {
+  background-color: rgba(249, 213, 112, 0.3) !important;
+}
+
+.card {
+  border: none;
+  margin-bottom: 24px;
+  -webkit-box-shadow: 0 0 13px 0 rgba(236, 236, 241, 0.44);
+  box-shadow: 0 0 13px 0 rgba(236, 236, 241, 0.44);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #f1f1f1, #e1e1e1);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d1d1d1;
+  border-radius: 20px;
+  border: 3px solid #f1f1f1;
+}
+
+.col-4 {
+  border: 1px solid rgb(160, 160, 160) !important;
+  border-radius: 5px;
+}
+
+.ri-drag-move-2-line {
+  float: right;
+}
+
+.div_resources {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item_resources {
+  flex: 1;
+  max-width: 120px !important;
+  margin: 5px;
+}
+
+/* xử lý efect image */

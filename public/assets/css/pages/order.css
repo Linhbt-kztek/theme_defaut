@@ -1,0 +1,89 @@
+.block-container {
+  background: #fff;
+  border: 1px solid #d7e0ec;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.customer-card {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #f8f9fb;
+}
+
+.customer-avatar img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #e5e7eb;
+}
+
+.customer-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--vz-heading-color);
+}
+
+.customer-meta {
+  font-size: 13px;
+}
+
+.customer-contact > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  font-size: 13px;
+}
+
+.label-booking {
+  font-weight: 600;
+  color: #495057;
+}
+
+.badge-custome {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 999px; /* pill */
+  background-color: #fff;
+  border: 1.5px solid;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.badge-success {
+  color: #2e7d32;
+  border-color: #2e7d32;
+  background-color: #e8f5e9;
+}
+
+.badge-warning {
+  color: #ef6c00;
+  border-color: #ef6c00;
+  background-color: #fff3e0;
+}
+
+.badge-danger {
+  color: #d32f2f;
+  border-color: #d32f2f;
+  background-color: #fdecea;
+}
+
+.badge-primary {
+  color: #1976d2;
+  border-color: #1976d2;
+  background-color: #e3f2fd;
+}
+
+.badge-secondary {
+  color: #616161;
+  border-color: #bdbdbd;
+  background-color: #f5f5f5;
+}

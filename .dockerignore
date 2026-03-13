@@ -1,3 +1,9 @@
 .env
-vendor
+node_modules
+docker/nginx/log/
+storage/logs/
+# vendor
+
 data-mysql
+minio
+key_software.txt

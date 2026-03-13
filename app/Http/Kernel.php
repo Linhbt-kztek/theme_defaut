@@ -2,6 +2,8 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\CustomerClassificationLogin;
+use App\Http\Middleware\WebCheckLogin;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -21,6 +23,10 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+        //  \App\Http\Middleware\AuthenticateIfNotLoggedIn::class,
+        //   'desktop.check_define_router' => \App\Http\Middleware\CheckUndefinedRoute::class
+
+
     ];
 
     /**
@@ -29,7 +35,10 @@ class Kernel extends HttpKernel
      * @var array<string, array<int, class-string|string>>
      */
     protected $middlewareGroups = [
+        //chạy chung cho toàn bộ web:admin,hoặc gì đó , miễn ko phải api thực..
         'web' => [
+            \App\Http\Middleware\DebugFlow::class,
+
             \App\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
@@ -39,10 +48,13 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\Localization::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
 
+
+
+
         ],
 
         'api' => [
-            // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
+            \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
@@ -65,5 +77,13 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'web-login' => WebCheckLogin::class,
+        'customer-classification' => CustomerClassificationLogin::class,
+
+        //mình thêm nhưng bỏ đi ko dùng đó --------------
+        //'mobile.auth.redirect' => \App\Http\Middleware\MobileMiddleware::class,
+        // 'auth.redirect' => \App\Http\Middleware\RedirectIfNotAuthenticated::class,
+
+
     ];
 }

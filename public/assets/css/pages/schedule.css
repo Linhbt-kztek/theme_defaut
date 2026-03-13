@@ -1,0 +1,325 @@
+.booking-wrapper {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.legend span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+  border-radius: 3px;
+}
+
+.free {
+  background: #4ade80;
+}
+.partial {
+  background: #eab308;
+}
+.booked {
+  background: #f87171;
+}
+
+.timeline-container {
+  overflow-x: auto;
+  margin-top: 16px;
+  border: 1px solid #ddd;
+}
+
+.timeline-header,
+.timeline-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 45px;
+}
+
+.timeline-header {
+  /* background: #f1f5f9; */
+  font-size: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding-left: 80px;
+}
+
+.timeline-header div {
+  width: auto;
+  text-align: center;
+  padding: 6px 0;
+  /* border-right: 1px solid #ddd; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.timeline-body {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 150px repeat(auto-fit, minmax(45px, 1fr));
+  border-top: 1px solid #eee;
+}
+
+.court-name {
+  position: sticky;
+  left: 0;
+  background: #fff;
+  z-index: 10;
+  width: 150px;
+  min-width: 150px;
+  flex-shrink: 0;
+  border-right: 1px solid #ddd;
+  padding: 8px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slot {
+  border-right: 1px solid #eee;
+  cursor: pointer;
+}
+
+.slot:hover {
+  background: #e0f2fe;
+}
+
+.slot.selected {
+  background: #93c5fd;
+}
+
+/* Shared session styling */
+.slot.shared {
+  cursor: pointer;
+  /* borders handled per-slot to create continuous strip */
+}
+.slot.shared-green {
+  background: #4ade80; /* green */
+}
+.slot.shared-yellow {
+  background: #fbbf24; /* yellow */
+}
+.slot.partial {
+  background: #eab308; /* partial (yellowish) */
+}
+
+.selected-info {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.field {
+  margin-bottom: 12px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-full:disabled,
+.date-full[readonly] {
+  background-color: #ffffff !important;
+  opacity: 1;
+}
+
+.slot.booked {
+  background: #e74c3c;
+  cursor: not-allowed;
+  /* pointer-events: none; */
+}
+
+.first-slot {
+  margin-left: 200px;
+}
+
+.btn-booking {
+  background-color: #4ade80  !important;
+  border-radius: 10px;
+  min-width: max-content;
+}
+
+
+/* TOOLTIP CARD */
+
+#slotTooltip {
+  position: fixed;
+  background: transparent;
+  border: none;
+  padding: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+
+.booking-tooltip-card {
+  width: 280px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  font-size: 13px;
+  color: #333;
+}
+
+/* HEADER */
+
+.tt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tt-title {
+  font-weight: 600;
+}
+
+.tt-type {
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* TYPE COLOR */
+
+.type-single {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.type-fixed {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+/* USER */
+
+.tt-user {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tt-avatar {
+  width: 40px;
+  height: 40px;
+  background: #f1f3f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #888;
+}
+
+.tt-user-info {
+  flex: 1;
+}
+
+.tt-name {
+  font-weight: 600;
+}
+
+.tt-code {
+  font-size: 12px;
+  color: #888;
+}
+
+/* ROW */
+
+.tt-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.tt-row i {
+  color: #888;
+}
+
+/* FOOTER */
+
+.tt-footer {
+  color: #888;
+  line-height: 1.4;
+}
+
+
+.slot.booked {
+  /* pointer-events: auto !important; */
+  position: relative;
+  z-index: 5;
+    cursor: pointer;
+}
+
+.slot.share-only {
+  cursor: not-allowed;
+  background: #f8f8f8;
+}
+.court-tooltip{
+  position: fixed;
+  background: #333;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  z-index: 9999;
+  display: none;
+}
+
+

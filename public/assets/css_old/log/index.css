@@ -1,0 +1,82 @@
+
+@media (min-width: 768px) {
+    [data-layout=vertical][data-sidebar-size=sm] {
+        min-height: 80vh;
+    }
+}
+.page-content {
+    padding: calc(48px + 1.5rem)  0 0 0;
+    width: 99%;
+    margin-right: 0;
+}
+.table-responsive {
+    height: calc(100vh - 360px);
+    width: 100%;
+    overflow-y: auto;
+}
+.table thead {
+    position: sticky;
+    top: -2px;
+    z-index: 5;
+
+}
+.table thead tr th {
+    border: 1px solid #aaa;
+}
+input.form-control {
+    font-size: 13px;
+}
+select.form-select {
+    font-size: 13px;
+}
+select.chosen-select option {
+    font-size: 13px;
+}
+/* width */
+::-webkit-scrollbar {
+    height: 10px;              /* height of horizontal scrollbar ← You're missing this */
+    width: 10px;               /* width of vertical scrollbar */
+    border: 1px solid #d5d5d5;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0F58EE;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0F58EE;
+}
+.form-control {
+    padding: 10px 20px !important;
+}
+.wrap-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+td ul li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+td span {
+    width: 300px;
+}
+
+.json-display {
+    display: block;
+    border: 1px solid #000;
+    margin: 0;
+    padding: 5px 20px;
+    width: 600px;
+}

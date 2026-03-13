@@ -1,0 +1,81 @@
+.pricing-tabs {
+  display: inline-flex;
+  background: #f1f3f5;
+  border-radius: 999px;
+  padding: 4px;
+  gap: 4px;
+  list-style: none;
+}
+
+.pricing-tabs li {
+  padding: 8px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #6c757d;
+  transition: all 0.2s ease;
+}
+
+.pricing-tabs li.active {
+  background: #0d6efd;
+  color: #fff;
+  font-weight: 600;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.price-input {
+  position: relative;
+}
+
+.price-input input {
+  padding: 4px 22px 4px 4px;
+  border-radius: 6px;
+}
+
+.currency-placeholder {
+  position: absolute;
+  bottom: 7px;
+  right: 12px;
+  font-size: 14px;
+  color: #adb5bd;
+  pointer-events: none;
+}
+
+.custom-select {
+  display: inline-block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  vertical-align: middle;
+  background: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.custom-select {
+  transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+.disabled-hour {
+  font-size: 13px;
+  display: inline-block;
+  padding-top: 6px;
+  color: #f89844;
+}

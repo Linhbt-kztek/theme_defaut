@@ -15,10 +15,12 @@ var nestedSortables = [].slice.call(document.querySelectorAll('.nested-sortable'
 
 if (nestedSortables) nestedSortables.forEach(function (nestedSort) {
   new Sortable(nestedSort, {
+
     group: 'nested',
     animation: 150,
     fallbackOnBody: true,
-    swapThreshold: 0.65
+    swapThreshold: 0.65,
+      draggable: ".item-nested",
   });
 }); // Nested sortable handle demo
 
@@ -30,7 +32,8 @@ if (nestedSortablesHandles) // Loop through each nested sortable element
       group: 'nested',
       animation: 150,
       fallbackOnBody: true,
-      swapThreshold: 0.65
+      swapThreshold: 0.65,
+        draggable: ".item-nested",
     });
   });
 /******/ })()

@@ -1,0 +1,122 @@
+.box-100 {
+    max-height: 100px;
+    overflow-y: auto;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ced4da;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ced4da;
+}
+
+.table-tree-td {
+    position: relative;
+}
+
+.table-tree {
+    position: relative;
+    top: 50%;
+}
+.table-tree:before{
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    border-top: 1px dotted;
+}
+.table-tree-content {
+
+}
+.table-tree-dot{
+    position: absolute;
+    width: 1px;
+    bottom: 50%;
+    height: 200%;
+    border-left: 1px dotted;
+}
+.table-tree-icon {
+    cursor: pointer;
+    left: 25px;
+    position: absolute;
+    background: white;
+    z-index: 1;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+}
+#comment-bar {
+
+}
+.btn-reply {
+    cursor: pointer;
+}
+/*========================================================== Loading =================================================*/
+body {
+    background: #ececec;
+}
+/*Hidden class for adding and removing*/
+.lds-dual-ring.hidden {
+    display: none;
+}
+
+/*Add an overlay to the entire page blocking any further presses to buttons or other elements.*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.8);
+    z-index: 999;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/*Spinner Styles*/
+.lds-dual-ring {
+    display: inline-block;
+    /*width: 80px;*/
+    /*height: 80px;*/
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 25% 50%;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.choices__list{
+    z-index: 2;
+}
+
+
