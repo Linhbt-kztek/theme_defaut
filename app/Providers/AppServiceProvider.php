@@ -2,15 +2,10 @@
 
 namespace App\Providers;
 
-use App\Models\Event;
-use App\Models\Identification;
-use App\Models\Notification;
-use App\Observers\DatabaseEventObserver;
-use App\Observers\DatabaseIdentificationObserver;
-use App\Observers\DatabaseNotificationObserver;
 use Carbon\Carbon;
 use Illuminate\Filesystem\AwsS3V3Adapter;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
@@ -81,23 +76,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(Request $request)
     {
-
-        if (env('APP_ENV') === 'production') {
-            URL::forceSchema('https');
-        }
-
-        \Log::info('BOOT TIME', [
-            'time' => microtime(true) - LARAVEL_START
-        ]);
-
-        $this->checkActiveKey();
-    }
-
-    private function checkActiveKey()
-    {
         AwsS3V3Adapter::macro('getClient', fn() => $this->client);
 
         //ghi log sql theo thời gian theo ngày-thang-năm----------------------------
+        
         // DB::listen(function ($query) {
 
         //     $year = Carbon::now()->year;
@@ -307,6 +289,10 @@ class AppServiceProvider extends ServiceProvider
                     //cho chạy bình thường
                 }
             }
+        }
+
+        if (env('APP_ENV') === 'production') {
+            URL::forceSchema('https');
         }
     }
 

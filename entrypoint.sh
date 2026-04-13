@@ -12,7 +12,8 @@
 # echo "MySQL container started. Proceeding with entrypoint script..."
 
 
-composer update --ignore-platform-req=ext-bcmath --ignore-platform-req=ext-sockets
+# composer update --ignore-platform-req=ext-bcmath --ignore-platform-req=ext-sockets
+composer dumpautoload
 
 php artisan migrate
 
