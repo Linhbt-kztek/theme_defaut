@@ -6,7 +6,7 @@
     @if (!empty($val['child_menu']))
         @foreach ($val['child_menu'] as $key_val => $value)
             @php
-                if (in_array($value['route_group'], $array_route_group)) {
+                if (in_array($value['route_group'], $array_route_group) || strpos($route_group, $value['route_group']) === 0) {
                     $active = true;
                 }
             @endphp
@@ -14,14 +14,18 @@
     @endif
 
     @php
-        if (in_array($val['route_group'], $array_route_group)) {
+        if (in_array($val['route_group'], $array_route_group) || strpos($route_group, $val['route_group']) === 0) {
             $active = true;
         }
     @endphp
 
+    @if(empty($val['permission']))
+        @php($show_nav_item = true)
+    @else
     @can(@$val['permission'])
         @php($show_nav_item = true)
     @endcan
+    @endif
 @endforeach
 
 
@@ -49,7 +53,7 @@
                         <?php $count++; ?>
                         @include('components.include.childMenu1')
                     @else
-                        @can(@$val['permission'], 'web')
+                        @if(empty($val['permission']) || auth()->user()->can(@$val['permission'], 'web'))
                             <li class="nav-item">
                                 <a href="{{ route($val['route']) }}"
                                    class="nav-link {{ strpos($route_group, $val['route_group']) === 0 ? 'active' : '' }}"
@@ -60,7 +64,7 @@
                                     {{ $keyVal }}
                                 </a>
                             </li>
-                        @endcan
+                        @endif
                     @endif
                 @endforeach
             </ul>

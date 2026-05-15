@@ -12,6 +12,10 @@ return new class extends Migration {
      */
     public function up()
     {
+        if (Schema::hasTable('configs')) {
+            return;
+        }
+
         Schema::create('configs', function (Blueprint $table) {
             $table->string('id', 55)->unique();
             // $table->integer('max_individual_ticket')->nullable()->comment('Tối đa vé cá nhân');

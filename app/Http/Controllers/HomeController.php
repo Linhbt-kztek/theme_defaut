@@ -42,7 +42,7 @@ class HomeController extends Controller
         $user = Auth::user();
       
         if ($user) {
-            return redirect()->route('user');
+            return redirect()->route('inventory.dashboard');
         }
 
         Session::flush();

@@ -1,14 +1,18 @@
 @php $active = false;$show_nav_item = false; @endphp
 @foreach ($val['child_menu'] as $key_val => $value)
     @php
-        if (in_array($value['route_group'], $array_route_group)) {
+        if (in_array($value['route_group'], $array_route_group) || strpos($route_group, $value['route_group']) === 0) {
             # code...
             $active = true;
         }
     @endphp
+    @if(empty($value['permission']))
+        @php($show_nav_item = true)
+    @else
     @can(@$value['permission'])
         @php($show_nav_item = true)
     @endcan
+    @endif
 @endforeach
 
 <!-- nếu bât cứ menu cấp 2 mà có quyền thì mới hiện menu cấp 1 -->
@@ -30,7 +34,7 @@
             style="">
             <ul class="nav nav-sm flex-column">
                 @foreach ($val['child_menu'] as $key_val => $value)
-                    @can(@$value['permission'], 'web')
+                    @if(empty($value['permission']) || auth()->user()->can(@$value['permission'], 'web'))
                         <li class="nav-item">
                             <a href="{{ route($value['route']) }}"
                                 class="nav-link {{ strpos($route_group, $value['route_group']) === 0 ? 'active' : '' }}"
@@ -42,7 +46,7 @@
                                 {{ $key_val }}
                             </a>
                         </li>
-                    @endcan
+                    @endif
                 @endforeach
             </ul>
         </div>

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Bindings\RepositoryBindings;
 use Carbon\Carbon;
 use Illuminate\Filesystem\AwsS3V3Adapter;
 use Illuminate\Pagination\Paginator;
@@ -26,7 +27,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        foreach (RepositoryBindings::map() as $abstract => $concrete) {
+            $this->app->singleton($abstract, $concrete);
+        }
     }
 
     //=============================================START FUNCTION=====================================================
@@ -103,6 +106,10 @@ class AppServiceProvider extends ServiceProvider
         Paginator::useBootstrap();
         // Blade::component('ticket-tr-table', ticketTrTable::class);
         Schema::defaultStringLength(191);
+
+        if ($this->app->runningInConsole()) {
+            return;
+        }
 
         //nếu là máy của server thì ko lấy dc mainboard serialt , nên phải lấy rombios để thay vào địa chỉ mac nhé
         $mac_address = "";
